@@ -13,7 +13,7 @@ namespace WebApplication3.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202212290749276_student"; }
+            get { return "202212291008482_student"; }
         }
         
         string IMigrationMetadata.Source

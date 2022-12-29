@@ -10,11 +10,11 @@ namespace WebApplication3.Models
 
         public string Name { get; set; }
 
-        [Display(Name = "Subject")]
-        public int SubjectId { get; set; }
+        //[Display(Name = "Subject")]
+        public virtual int SubjectId { get; set; }
 
         [ForeignKey("SubjectId")]
-        public Subject Subject { get; set; }
+        public virtual Subject Subjects { get; set; } 
 
         [Required]
         public int Marks { get; set; }

@@ -168,9 +168,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212290749276_student.cs" />
-    <Compile Include="Migrations\202212290749276_student.designer.cs">
-      <DependentUpon>202212290749276_student.cs</DependentUpon>
+    <Compile Include="Migrations\202212291008482_student.cs" />
+    <Compile Include="Migrations\202212291008482_student.designer.cs">
+      <DependentUpon>202212291008482_student.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ISubjectRepo.cs" />
@@ -221,8 +221,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212290749276_student.resx">
-      <DependentUpon>202212290749276_student.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212291008482_student.resx">
+      <DependentUpon>202212291008482_student.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

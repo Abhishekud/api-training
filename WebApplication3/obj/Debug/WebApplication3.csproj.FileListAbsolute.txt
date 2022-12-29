@@ -263,5 +263,5 @@ C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\
 C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csproj.CopyComplete
 C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
-C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.cache
 C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.Migrations.student.resources
+C:\Users\abhishekd\Downloads\New folder (5)\lp-backend-training\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.cache
