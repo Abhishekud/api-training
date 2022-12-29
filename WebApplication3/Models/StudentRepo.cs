@@ -8,10 +8,10 @@ namespace WebApplication3.Models
 {
     public class StudentRepo : IStudentRepo
     {
-        private StudentContext _StudentContext;
+        private MyContext _StudentContext;
         public StudentRepo()
         {
-            _StudentContext = new StudentContext();
+            _StudentContext = new MyContext();
         }
 
         public List<Student> AddStudent(Student model)
@@ -24,14 +24,14 @@ namespace WebApplication3.Models
         public void DeleteStudent(int id)
         {
            
-            var Student = _StudentContext.Students.FirstOrDefault(e => e.Id == id);
+            var Student = _StudentContext.Students.FirstOrDefault(e => e.StudentId == id);
             _StudentContext.Students.Remove(Student);
             _StudentContext.SaveChanges();
         }
 
         public Student GetStudentBId(int id)
         {
-            var Student = _StudentContext.Students.FirstOrDefault(e => e.Id == id);
+            var Student = _StudentContext.Students.FirstOrDefault(e => e.StudentId == id);
             return Student;
 
         }
@@ -43,7 +43,7 @@ namespace WebApplication3.Models
 
         public Student UpdateStudent(int id, Student model)
         {
-           var emp = _StudentContext.Students.FirstOrDefault(e => e.Id == id);
+           var emp = _StudentContext.Students.FirstOrDefault(e => e.StudentId == id);
 
             emp.Name = model.Name;
             emp.Marks = model.Marks;

@@ -3,8 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication3.Models
 {
-    public class Student : User
+    public class Student 
     {
+        [Key]
+        public int StudentId { get; set; }
+
+        public string Name { get; set; }
+
         [Display(Name = "Subject")]
         public int SubjectId { get; set; }
 

@@ -8,10 +8,10 @@ namespace WebApplication3.Models
 {
     public class SubjectRepo : ISubjectRepo
     {
-        private SubjectContext _SubjectContext;
+        private MyContext _SubjectContext;
         public SubjectRepo()
         {
-            _SubjectContext = new SubjectContext();
+            _SubjectContext = new MyContext();
         }
 
         public List<Subject> AddSubject(Subject model)

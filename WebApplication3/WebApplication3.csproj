@@ -168,20 +168,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212290608268_Student.cs" />
-    <Compile Include="Migrations\202212290608268_Student.designer.cs">
-      <DependentUpon>202212290608268_Student.cs</DependentUpon>
+    <Compile Include="Migrations\202212290749276_student.cs" />
+    <Compile Include="Migrations\202212290749276_student.designer.cs">
+      <DependentUpon>202212290749276_student.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ISubjectRepo.cs" />
-    <Compile Include="Models\SubjectContext.cs" />
     <Compile Include="Models\SubjectRepo.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentContext.cs" />
     <Compile Include="Models\StudentRepo.cs" />
     <Compile Include="Models\IStudentRepo.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -223,8 +221,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212290608268_Student.resx">
-      <DependentUpon>202212290608268_Student.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212290749276_student.resx">
+      <DependentUpon>202212290749276_student.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
