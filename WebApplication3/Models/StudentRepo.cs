@@ -35,6 +35,12 @@ namespace WebApplication3.Models
             return Student;
 
         }
+        public Student GetStudentByEmail(string email)
+        {
+            var Student = _StudentContext.Students.FirstOrDefault(e => e.Email == email);
+            return Student;
+
+        }
 
         public List<Student> GetStudentList()
         {
@@ -43,14 +49,30 @@ namespace WebApplication3.Models
 
         public Student UpdateStudent(int id, Student model)
         {
-           var emp = _StudentContext.Students.FirstOrDefault(e => e.StudentId == id);
+           var Student = _StudentContext.Students.FirstOrDefault(e => e.StudentId == id);
 
-            emp.Name = model.Name;
-            emp.Marks = model.Marks;
+            Student.FirstName = model.FirstName;
+            Student.LastName = model.LastName;
+            Student.Email = model.Email;
+            Student.MobileNumber = model.MobileNumber;
 
-            _StudentContext.Students.AddOrUpdate(emp);
+            _StudentContext.Students.AddOrUpdate(Student);
             _StudentContext.SaveChanges();
-            return emp;
+            return Student;
+
+        }
+        public Student UpdateStudent(string email, Student model)
+        {
+            var Student = _StudentContext.Students.FirstOrDefault(e => e.Email == email);
+
+            Student.FirstName = model.FirstName;
+            Student.LastName = model.LastName;
+            Student.Email = model.Email;
+            Student.MobileNumber = model.MobileNumber;
+
+            _StudentContext.Students.AddOrUpdate(Student);
+            _StudentContext.SaveChanges();
+            return Student;
 
         }
     }

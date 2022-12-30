@@ -8,6 +8,6 @@ namespace WebApplication3.Models
         public int SubjectId { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } 
     }
 }

@@ -161,6 +161,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\MarkController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -168,12 +169,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212291008482_student.cs" />
-    <Compile Include="Migrations\202212291008482_student.designer.cs">
-      <DependentUpon>202212291008482_student.cs</DependentUpon>
+    <Compile Include="Migrations\202212300817365_student.cs" />
+    <Compile Include="Migrations\202212300817365_student.designer.cs">
+      <DependentUpon>202212300817365_student.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\IMarkRepo.cs" />
     <Compile Include="Models\ISubjectRepo.cs" />
+    <Compile Include="Models\Mark.cs" />
+    <Compile Include="Models\MarkRepo.cs" />
     <Compile Include="Models\SubjectRepo.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Student.cs" />
@@ -221,8 +225,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212291008482_student.resx">
-      <DependentUpon>202212291008482_student.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212300817365_student.resx">
+      <DependentUpon>202212300817365_student.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

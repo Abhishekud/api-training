@@ -43,6 +43,18 @@ namespace WebApplication3.Controllers
 
             return emp;
         }
+        public Student Put(string email, Student request)
+        {
+            var Student = _repo.GetStudentByEmail(email);
+            if (Student == null)
+            {
+                throw new Exception("Student email is not exist");
+            }
+            var emp = _repo.UpdateStudent(email, request);
+
+            return emp;
+        }
+
 
         public List<Student> Delete(int id)
         {

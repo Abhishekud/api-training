@@ -43,13 +43,13 @@ namespace WebApplication3.Models
 
         public Subject UpdateSubject(int id, Subject model)
         {
-           var emp = _SubjectContext.Subjects.FirstOrDefault(e => e.SubjectId == id);
+           var Subject = _SubjectContext.Subjects.FirstOrDefault(e => e.SubjectId == id);
 
-            emp.Name = model.Name; 
+            Subject.Name = model.Name; 
 
-            _SubjectContext.Subjects.AddOrUpdate(emp);
+            _SubjectContext.Subjects.AddOrUpdate(Subject);
             _SubjectContext.SaveChanges();
-            return emp;
+            return Subject;
 
         }
     }

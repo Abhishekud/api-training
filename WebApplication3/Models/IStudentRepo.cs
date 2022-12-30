@@ -9,11 +9,16 @@ namespace WebApplication3.Models
     {
         Student GetStudentBId(int id);
 
+        Student GetStudentByEmail(string email);
+
         List<Student> GetStudentList();
 
         List<Student> AddStudent(Student model);
 
         Student UpdateStudent(int id, Student model);
+
+        Student UpdateStudent(string email, Student model);
+
         void DeleteStudent(int id);
     }
 }
