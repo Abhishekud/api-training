@@ -29,7 +29,7 @@ namespace WebApplication3.Models
             _MarkContext.SaveChanges();
         }
 
-        public Mark GetMarkBId(int id)
+        public Mark GetStudentDto(int id)
         {
             var Mark = _MarkContext.Marks.FirstOrDefault(e => e.Id == id);
             return Mark;

@@ -21,7 +21,7 @@ namespace WebApplication3.Controllers
         public Mark Get(int id)
         {
 
-            return _repo.GetMarkBId(id);
+            return _repo.GetStudentDto(id);
 
         }
 
@@ -34,7 +34,7 @@ namespace WebApplication3.Controllers
 
         public Mark Put(int id, Mark request)
         {
-            var Mark = _repo.GetMarkBId(id);
+            var Mark = _repo.GetStudentDto(id);
             if (Mark == null)
             {
                 throw new Exception("Mark Id is not exist");
@@ -47,7 +47,7 @@ namespace WebApplication3.Controllers
         public List<Mark> Delete(int id)
         {
 
-            var Mark = _repo.GetMarkBId(id);
+            var Mark = _repo.GetStudentDto(id);
             if (Mark == null)
             {
                 throw new Exception("Mark Id is not exist");

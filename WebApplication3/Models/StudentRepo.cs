@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
+using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Models
 {
@@ -73,6 +74,30 @@ namespace WebApplication3.Models
             _StudentContext.Students.AddOrUpdate(Student);
             _StudentContext.SaveChanges();
             return Student;
+
+        }
+        public StudentDto GetStudentDto(int id)
+        {
+
+            var marks = _StudentContext.Marks.Where(m => m.StudentId == id).ToList();
+
+            var subjectdto = new List<SubjectDto>();
+            foreach (var mark in marks)
+            {
+                var sub = new SubjectDto();
+                sub.SubjectName = mark.Subjects.Name;
+                sub.SubjectId = mark.SubjectId;
+                sub.Mark = mark.Marks;
+                subjectdto.Add(sub);
+            }
+
+            var dto = new StudentDto
+            {
+                StudentId = id,
+                Subjects = subjectdto
+            };
+
+            return dto;
 
         }
     }

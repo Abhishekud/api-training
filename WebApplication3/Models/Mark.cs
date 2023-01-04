@@ -21,4 +21,5 @@ namespace WebApplication3.Models
         [Required]
         public int Marks { get; set; }
     }
+
 }

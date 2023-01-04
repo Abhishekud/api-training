@@ -4,11 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApplication3.Filter;
 
 namespace WebApplication3.Controllers
 {
     public class ValuesController : ApiController
-    {
+    {   [AthorizationFilter]
         // GET api/values
         public IEnumerable<string> Get()
         {

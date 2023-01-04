@@ -7,7 +7,7 @@ namespace WebApplication3.Models
 {
     public interface IMarkRepo
     {
-        Mark GetMarkBId(int id);
+        Mark GetStudentDto(int id);
          
         List<Mark> GetMarkList();
 

@@ -166,6 +166,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Filter\AthorizationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +175,7 @@
       <DependentUpon>202212300817365_student.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Dto\StudentDto.cs" />
     <Compile Include="Models\IMarkRepo.cs" />
     <Compile Include="Models\ISubjectRepo.cs" />
     <Compile Include="Models\Mark.cs" />
