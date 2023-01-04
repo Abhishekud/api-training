@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Http;
 using WebApplication3.Models;
+using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Controllers
 {
@@ -17,13 +18,7 @@ namespace WebApplication3.Controllers
         {
             return _repo.GetMarkList();
 
-        }
-        public Mark Get(int id)
-        {
-
-            return _repo.GetStudentDto(id);
-
-        }
+        } 
 
         public List<Mark> Post(Mark request)
         {
@@ -34,7 +29,7 @@ namespace WebApplication3.Controllers
 
         public Mark Put(int id, Mark request)
         {
-            var Mark = _repo.GetStudentDto(id);
+            var Mark = _repo.GetMarkId(id);
             if (Mark == null)
             {
                 throw new Exception("Mark Id is not exist");
@@ -47,7 +42,7 @@ namespace WebApplication3.Controllers
         public List<Mark> Delete(int id)
         {
 
-            var Mark = _repo.GetStudentDto(id);
+            var Mark = _repo.GetMarkId(id);
             if (Mark == null)
             {
                 throw new Exception("Mark Id is not exist");

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
+using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Models
 {
@@ -23,24 +24,20 @@ namespace WebApplication3.Models
 
         public void DeleteMark(int id)
         {
-           
+
             var Mark = _MarkContext.Marks.FirstOrDefault(e => e.Id == id);
             _MarkContext.Marks.Remove(Mark);
             _MarkContext.SaveChanges();
         }
 
-        public Mark GetStudentDto(int id)
+
+       
+        public Mark GetMarkId(int id)
         {
             var Mark = _MarkContext.Marks.FirstOrDefault(e => e.Id == id);
             return Mark;
 
         }
-        //public Mark GetMarkBStudentId(int id)
-        //{
-        //    var Mark = _MarkContext.Students..FirstOrDefault(e => e.Id == id);
-        //    return Mark;
-
-        //}
 
         public List<Mark> GetMarkList()
         {
@@ -49,14 +46,14 @@ namespace WebApplication3.Models
 
         public Mark UpdateMark(int id, Mark model)
         {
-           var Mark = _MarkContext.Marks.FirstOrDefault(e => e.Id == id);
+            var Mark = _MarkContext.Marks.FirstOrDefault(e => e.Id == id);
 
-            Mark.Marks = model.Marks; 
+            Mark.Marks = model.Marks;
 
             _MarkContext.Marks.AddOrUpdate(Mark);
             _MarkContext.SaveChanges();
             return Mark;
 
-        } 
+        }
     }
 }

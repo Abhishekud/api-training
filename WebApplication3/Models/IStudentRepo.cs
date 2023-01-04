@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Models
 {
@@ -20,5 +21,6 @@ namespace WebApplication3.Models
         Student UpdateStudent(string email, Student model);
 
         void DeleteStudent(int id);
+        StudentDto GetStudentDto(int id);
     }
 }

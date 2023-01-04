@@ -5,23 +5,31 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebApplication3.Filter;
+using WebApplication3.Models;
+using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Controllers
 {
     public class ValuesController : ApiController
-    {   [AthorizationFilter]
+    {
+        private readonly IStudentRepo _repo;
+        public ValuesController()
+        {
+            _repo = new StudentRepo();
+        }
+        [AthorizationFilter]
         // GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
+        [AthorizationFilter]
+        public StudentDto Get(int id)
+        {
 
-        // GET api/values/5
-        //public int Get(int id)
-        //{
-        //    Sample objSample = new Sample(id);
-        //    return objSample.GetId();
-        //}
+            return _repo.GetStudentDto(id);
+
+        }
 
         // POST api/values
         public void Post([FromBody] string value)
