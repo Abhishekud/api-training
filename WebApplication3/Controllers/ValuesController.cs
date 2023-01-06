@@ -10,20 +10,20 @@ using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Controllers
 {
-    public class ValuesController : ApiController
+    public class ValuesController : AuthenticationController
     {
         private readonly IStudentRepo _repo;
         public ValuesController()
         {
             _repo = new StudentRepo();
         }
-        [AthorizationFilter]
+       // [AthorizationFilter]
         // GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
-        [AthorizationFilter]
+      //  [AthorizationFilter]
         public StudentDto Get(int id)
         {
 

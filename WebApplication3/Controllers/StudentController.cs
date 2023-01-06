@@ -5,7 +5,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
-    public class StudentController : ApiController
+    public class StudentController : AuthenticationController
     {
         private readonly IStudentRepo _repo;
         public StudentController()

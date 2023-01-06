@@ -5,7 +5,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
-    public class SubjectController : ApiController
+    public class SubjectController : AuthenticationController
     {
         private readonly ISubjectRepo _repo;
         public SubjectController()

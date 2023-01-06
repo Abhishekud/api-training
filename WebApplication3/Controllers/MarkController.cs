@@ -6,7 +6,7 @@ using WebApplication3.Models.Dto;
 
 namespace WebApplication3.Controllers
 {
-    public class MarkController : ApiController
+    public class MarkController : AuthenticationController
     {
         private readonly IMarkRepo _repo;
         public MarkController()
